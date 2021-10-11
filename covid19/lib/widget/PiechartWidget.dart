@@ -1,4 +1,4 @@
-import 'package:covid19/assets/colors.dart';
+import 'package:covid19/assets/colors/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:pie_chart/pie_chart.dart';
 

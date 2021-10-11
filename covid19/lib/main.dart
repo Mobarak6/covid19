@@ -1,6 +1,7 @@
 import 'package:covid19/provider/report.dart';
 import 'package:covid19/screen/countryDetailsScreen.dart';
 import 'package:covid19/screen/homeScreen.dart';
+import 'package:covid19/screen/worldWideScreen.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 

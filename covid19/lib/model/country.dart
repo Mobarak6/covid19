@@ -66,17 +66,17 @@ class CountryModel extends CountrySubName implements ArgumnetSerialize {
   List<Object> getArgumnet() {
     return [
       country,
-      Numeral(cases),
-      Numeral(todayCases),
-      Numeral(deaths),
-      Numeral(todayDeaths),
-      Numeral(recovered),
-      Numeral(active),
-      Numeral(critical),
-      Numeral(casesPerOneMillion),
-      Numeral(deathsPerOneMillion),
-      Numeral(totalTests),
-      Numeral(testsPerOneMillion),
+      Numeral(cases).value(fractionDigits: 2),
+      Numeral(todayCases).value(fractionDigits: 2),
+      Numeral(deaths).value(fractionDigits: 2),
+      Numeral(todayDeaths).value(fractionDigits: 2),
+      Numeral(recovered).value(fractionDigits: 2),
+      Numeral(active).value(fractionDigits: 2),
+      Numeral(critical).value(fractionDigits: 2),
+      Numeral(casesPerOneMillion).value(fractionDigits: 2),
+      Numeral(deathsPerOneMillion).value(fractionDigits: 2),
+      Numeral(totalTests).value(fractionDigits: 2),
+      Numeral(testsPerOneMillion).value(fractionDigits: 2),
     ];
   }
 

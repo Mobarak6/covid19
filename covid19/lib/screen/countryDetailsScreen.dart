@@ -1,4 +1,4 @@
-import 'package:covid19/assets/colors.dart';
+import 'package:covid19/assets/colors/colors.dart';
 import 'package:covid19/model/country.dart';
 
 import 'package:covid19/widget/PiechartWidget.dart';
@@ -23,7 +23,7 @@ class CountryDetailScreen extends StatelessWidget {
         ),
       ),
       body: Container(
-        color: Color.fromRGBO(44, 39, 121, 10),
+        color: AppColors.bodyColor,
         child: Column(
           children: [
             Padding(

@@ -1,4 +1,4 @@
-import 'package:covid19/assets/colors.dart';
+import 'package:covid19/assets/colors/colors.dart';
 import 'package:covid19/provider/report.dart';
 import 'package:flutter/material.dart';
 import 'package:numeral/numeral.dart';
@@ -66,8 +66,9 @@ class CardGridWidget extends StatelessWidget {
               children: [
                 itemText('Cases'),
                 FittedBox(
-                    child: valueText(
-                        (Numeral(report.wideModel!.cases).value()).toString()))
+                    child: valueText((Numeral(report.wideModel!.cases)
+                            .value(fractionDigits: 2))
+                        .toString()))
               ],
             ),
           ),
@@ -97,6 +98,7 @@ class CardGridWidget extends StatelessWidget {
                         FittedBox(
                             child: valueText(
                                 Numeral(report.wideModel!.recovered)
+                                    .value(fractionDigits: 2)
                                     .toString())),
                       ],
                     ),
@@ -121,8 +123,9 @@ class CardGridWidget extends StatelessWidget {
                     children: [
                       itemText('Deaths'),
                       FittedBox(
-                          child: valueText(
-                              Numeral(report.wideModel!.deaths).toString())),
+                          child: valueText(Numeral(report.wideModel!.deaths)
+                              .value(fractionDigits: 2)
+                              .toString())),
                     ],
                   ),
                 ),

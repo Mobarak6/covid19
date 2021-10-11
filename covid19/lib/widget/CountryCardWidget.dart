@@ -16,22 +16,24 @@ class CountryCardWidget extends StatelessWidget {
     final modelData = repotData.renderList[item];
     return ListTile(
       subtitle: Text(
-        'Today',
+        Numeral(modelData.active).value(fractionDigits: 2).toString(),
         style: TextStyle(
           color: Colors.blueAccent,
           fontWeight: FontWeight.bold,
+          fontSize: 20,
         ),
       ),
+      isThreeLine: true,
       onTap: () {
         Navigator.pushNamed(context, CountryDetailScreen.routeName,
             arguments: modelData);
       },
       title: Text(
-        Numeral(modelData.todayCases).toString(),
+        repotData.renderList[item].country,
         style: TextStyle(
           color: Colors.white,
-          fontSize: 22,
-          fontWeight: FontWeight.bold,
+          fontSize: 20,
+          fontWeight: FontWeight.w400,
         ),
       ),
       selectedTileColor: Colors.yellowAccent,
@@ -45,10 +47,8 @@ class CountryCardWidget extends StatelessWidget {
           // radius: 40,
           child: FittedBox(
             child: Text(
-              modelData.countrySubName.call().toUpperCase(),
-              style: TextStyle(
-                color: Colors.redAccent,
-              ),
+              item.toString(),
+              style: TextStyle(color: Colors.black, fontSize: 20),
             ),
           ),
           backgroundColor: Colors.white,
