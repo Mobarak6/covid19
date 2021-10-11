@@ -16,7 +16,7 @@ class CountryCardWidget extends StatelessWidget {
     final modelData = repotData.renderList[item];
     return ListTile(
       subtitle: Text(
-        Numeral(modelData.active).value(fractionDigits: 2).toString(),
+        Numeral(modelData.todayCases).value(fractionDigits: 2).toString(),
         style: TextStyle(
           color: Colors.blueAccent,
           fontWeight: FontWeight.bold,
